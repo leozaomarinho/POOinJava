@@ -24,6 +24,7 @@ public class Program {
 			String option = input.next();
 			Pessoa pagador = null;
 			
+			//Instanciando os objetos
 			if(option.equals("pf")) {
 				pagador = new PessoaFisica();
 			}
@@ -34,12 +35,16 @@ public class Program {
             //continue; // pula para o próximo ciclo do loop
             
             String nome;
-    		double gastosAnuais=0;
+    		double gastosAnuais;
     		System.out.println("Digite o nome do pagador:");
     		nome=input.nextLine();
+    		System.out.println("Digite o ganho anual:");
     		gastosAnuais=input.nextDouble();
     		
+    		//Atribuindo valores ao Objeto
     		pagador.setNome(nome);
+    		pagador.setRendaAnual(gastosAnuais);
+    		
     		if(pagador instanceof PessoaFisica){
     			double gastosSaude = 0;
     			((PessoaFisica) pagador).setGastosSaude(gastosSaude);
@@ -48,6 +53,12 @@ public class Program {
     			int quantFunc = 0;
     			((PessoaJuridica) pagador).setNumFuncionario(quantFunc);
     		}
+    		
+    		pagadores.add(pagador);
+		}
+		//Exibindo os pagadores e os valores
+		for(Pessoa pagamentos : pagadores) {
+			pagamentos.calcImpost();
 		}
 		
 		input.close();

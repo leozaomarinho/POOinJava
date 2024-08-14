@@ -24,7 +24,7 @@ public abstract class Pessoa {
 		this.rendaAnual = rendaAnual;
 	}
 	
-	abstract double calcImport();
+	public abstract double calcImpost();
 	
 	@Override
 	public String toString() {

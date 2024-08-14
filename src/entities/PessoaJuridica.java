@@ -18,7 +18,7 @@ public class PessoaJuridica extends Pessoa {
 
 
 	@Override
-	double calcImport() {
+	public double calcImpost() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
