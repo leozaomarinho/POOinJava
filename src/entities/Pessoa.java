@@ -2,8 +2,8 @@ package entities;
 
 public abstract class Pessoa {
 	
-	private String nome;
-	private double rendaAnual;
+	protected String nome;
+	protected double rendaAnual;
 		
 	public Pessoa() {
 	}

@@ -1,4 +1,5 @@
 package entities;
+import entities.Pessoa;
 
 public class PessoaFisica extends Pessoa {
 
