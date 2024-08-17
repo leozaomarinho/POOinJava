@@ -1,5 +1,4 @@
 package entities;
-import entities.Pessoa;
 
 public class PessoaFisica extends Pessoa {
 
@@ -18,8 +17,20 @@ public class PessoaFisica extends Pessoa {
 
 	@Override
 	public double calcImpost() {
-		// TODO Auto-generated method stub
-		return 0;
+		double imposto =0;
+		
+		if (this.rendaAnual<19999) {
+			imposto = rendaAnual*0.15;
+		}
+		else if(this.rendaAnual>=20000){
+			imposto = rendaAnual*0.25;
+			
+			if (this.gastosSaude>0){
+				double disconto = this.gastosSaude/2;
+				imposto -=disconto;
+			}
+		}
+		return imposto;
 	}
 
 }
