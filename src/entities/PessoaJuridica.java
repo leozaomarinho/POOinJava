@@ -19,8 +19,16 @@ public class PessoaJuridica extends Pessoa {
 
 	@Override
 	public double calcImpost() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		double imposto;
+		if(this.numFuncionario>10) {
+			imposto=this.rendaAnual*0.14;
+		}
+		else {
+			imposto=this.rendaAnual*0.16;
+		}
+		
+		return imposto;
 	}
 	
 	
