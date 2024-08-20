@@ -16,19 +16,18 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-	public double getRendaAnual() {
-		return rendaAnual;
+	public String getRendaAnual() {
+		return String.format("%.2f", rendaAnual);
 	}
 
 	public void setRendaAnual(double rendaAnual) {
 		this.rendaAnual = rendaAnual;
 	}
 	
-	public abstract double calcImpost();
+	public abstract String calcImpost();
 	
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", rendaAnual=" + rendaAnual + "]";
+		return "Pessoa nome : " + nome + ", rendaAnual : " + getRendaAnual() + "";
 	}
-
 }

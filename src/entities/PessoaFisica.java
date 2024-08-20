@@ -16,7 +16,7 @@ public class PessoaFisica extends Pessoa {
 	}
 
 	@Override
-	public double calcImpost() {
+	public String calcImpost() {
 		double imposto =0;
 		
 		if (this.rendaAnual<19999) {
@@ -30,10 +30,10 @@ public class PessoaFisica extends Pessoa {
 				imposto -=disconto;
 			}
 		}
-		return imposto;
+		return String.format("%.2f", imposto);
 	}
 	
 	public String toString(){
-		return "Pessoa " + nome + ", Imposto pago= " + calcImpost() + "]";
+		return "Pessoa : " + nome + ", Imposto pago : " + calcImpost() + "";
 	}
 }

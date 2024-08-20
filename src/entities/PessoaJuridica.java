@@ -18,7 +18,7 @@ public class PessoaJuridica extends Pessoa {
 
 
 	@Override
-	public double calcImpost() {
+	public String calcImpost() {
 
 		double imposto;
 		if(this.numFuncionario>10) {
@@ -28,11 +28,11 @@ public class PessoaJuridica extends Pessoa {
 			imposto=this.rendaAnual*0.16;
 		}
 		
-		return imposto;
+		return String.format("%.2f", imposto);
 	}
 	
 	public String toString(){
-		return "Empresa " + nome + ", Imposto pago= " + calcImpost() + "]";
+		return "Empresa : " + nome + ", Imposto pago : " + calcImpost() + "";
 
 	}
 	

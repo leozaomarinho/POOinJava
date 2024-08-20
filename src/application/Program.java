@@ -61,10 +61,7 @@ public class Program {
     		pagadores.add(pagador);
     		
 		}
-		//Exibindo os pagadores e os valores
-				for(Pessoa pagamentos : pagadores) {
-					pagamentos.toString();
-				}
+		
 		}
 		catch(Exception e){
 			System.out.println("Refaça o processo novamente");
@@ -72,6 +69,11 @@ public class Program {
 			System.exit(0);
 		}
 		finally{
+			System.out.println("Taxas Pagas: ");
+			//Exibindo os pagadores e os valores
+			for(Pessoa pagamentos : pagadores) {
+				System.out.println(pagamentos);;
+			}
 			System.out.println("Fim do programa");
 			input.close();
 		}
