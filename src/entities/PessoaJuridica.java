@@ -31,6 +31,11 @@ public class PessoaJuridica extends Pessoa {
 		return imposto;
 	}
 	
+	public String toString(){
+		return "Empresa " + nome + ", Imposto pago= " + calcImpost() + "]";
+
+	}
+	
 	
 	
 	

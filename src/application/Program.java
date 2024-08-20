@@ -63,7 +63,7 @@ public class Program {
 		}
 		//Exibindo os pagadores e os valores
 				for(Pessoa pagamentos : pagadores) {
-					pagamentos.calcImpost();
+					pagamentos.toString();
 				}
 		}
 		catch(Exception e){

@@ -32,5 +32,8 @@ public class PessoaFisica extends Pessoa {
 		}
 		return imposto;
 	}
-
+	
+	public String toString(){
+		return "Pessoa " + nome + ", Imposto pago= " + calcImpost() + "]";
+	}
 }
